@@ -1,0 +1,28 @@
+html
+  head 
+    title="Ejercicio PUG"
+  body
+  a(href="/") 
+    button Formulario
+  a(href="/productos") 
+    button Vista de Productos
+
+  h4 Vista de Productos:
+
+  if productos.length < 1
+    h5 No se encontraron productos.
+
+  else
+    table
+      thead
+          tr
+              th Nombre:
+              th Precio:
+              th Foto:
+      tbody
+          each producto in productos
+              tr
+                  td #{ producto.title }
+                  td #{ producto.price }
+                  td
+                    img(src=producto.thumbnail)

@@ -1,0 +1,23 @@
+html 
+  head
+    title Ejercicio PUG
+  body 
+
+    a(href="/") 
+        button Formulario
+    a(href="/productos") 
+        button Vista de Productos
+
+    h4 Ingresar un nuevo producto:
+
+        form(action="/productos" method="POST" id="formulario")
+            label(for="title") Titulo: 
+            input(type="text" name="title" id="title" required)  
+        
+            label(for="price") Precio: 
+            input(type="text" name="price" id="price" required)  
+        
+            label(for="thumbnail") URL de la imagen: 
+            input(type="text" name="thumbnail" id="thumbnail" required)  
+
+            input(type="submit", value="Enviar")
